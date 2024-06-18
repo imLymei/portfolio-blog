@@ -42,7 +42,7 @@ export default async function PostPage({
       <MDXRemote source={post.content} />
       <Link
         href="#top"
-        className="absolute left-1/2 -translate-x-1/2 text-sm text-neutral-400 hover:text-neutral-300"
+        className="absolute left-1/2 -translate-x-1/2 text-sm text-neutral-400 no-underline hover:text-neutral-300"
       >
         Go to top
       </Link>

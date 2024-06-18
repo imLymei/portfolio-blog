@@ -1,21 +1,13 @@
 import RollWrapper from "@/components/RollWrapper";
-import { ICON_SIZE } from "@/config";
-import { BiLogoTypescript } from "react-icons/bi";
-import {
-  FaAws,
-  FaDatabase,
-  FaGitAlt,
-  FaNodeJs,
-  FaPython,
-} from "react-icons/fa6";
-import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { TbBrandCSharp } from "react-icons/tb";
+import { ICON_SIZE, SKILLS, PROJECTS } from "@/config";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="flex flex-col gap-24">
       <section>
-        <h1 className="py-24 text-center text-4xl font-bold sm:text-5xl md:text-6xl">
+        <h1 className="py-32 text-center text-4xl font-bold sm:text-5xl md:text-6xl">
           {"<👋 HELLO WORLD />"}
         </h1>
 
@@ -30,53 +22,62 @@ export default function Home() {
       </section>
 
       <section>
-        <h2 className="text-4xl font-bold">Skills</h2>
+        <h2 className="text-center text-4xl font-bold">Skills</h2>
         <div className="pt-32 lg:pb-24 xl:pb-32">
           <RollWrapper>
-            <BiLogoTypescript title="Typescript" size={ICON_SIZE.EXTRA_LARGE} />
-            <FaNodeJs title="Node.js" size={ICON_SIZE.EXTRA_LARGE} />
-            <RiNextjsFill title="Next.js" size={ICON_SIZE.EXTRA_LARGE} />
-            <RiTailwindCssFill
-              title="Tailwind CSS"
-              size={ICON_SIZE.EXTRA_LARGE}
-            />
-            <FaDatabase
-              title="Database Management"
-              size={ICON_SIZE.EXTRA_LARGE}
-            />
-            <FaGitAlt title="Git" size={ICON_SIZE.EXTRA_LARGE} />
-            <FaPython title="Python" size={ICON_SIZE.EXTRA_LARGE} />
-            <TbBrandCSharp title="C#" size={ICON_SIZE.EXTRA_LARGE} />
-            <FaAws title="AWS" size={ICON_SIZE.EXTRA_LARGE} />
+            {SKILLS.map((skill) => (
+              <skill.icon
+                key={`skill-${skill.title}`}
+                title={skill.title}
+                size={ICON_SIZE.EXTRA_LARGE}
+              />
+            ))}
           </RollWrapper>
         </div>
       </section>
 
-      <section>
+      <section className="flex flex-col items-center gap-12">
         <h2 className="text-4xl font-bold">Projects</h2>
-        <div className="mt-4 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <div className="rounded-lg border p-4 shadow-md">
-            <h3 className="text-2xl font-semibold">Project 1</h3>
-            <p className="mt-2 text-gray-600">
-              A brief description of your first project. Highlight the
-              technologies used and the problem it solves.
-            </p>
-          </div>
-          <div className="rounded-lg border p-4 shadow-md">
-            <h3 className="text-2xl font-semibold">Project 2</h3>
-            <p className="mt-2 text-gray-600">
-              A brief description of your second project. Highlight the
-              technologies used and the problem it solves.
-            </p>
-          </div>
-          <div className="rounded-lg border p-4 shadow-md">
-            <h3 className="text-2xl font-semibold">Project 3</h3>
-            <p className="mt-2 text-gray-600">
-              A brief description of your third project. Highlight the
-              technologies used and the problem it solves.
-            </p>
-          </div>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {PROJECTS.map((project) => (
+            <Link
+              key={`project-${project.title}`}
+              href={project.repository}
+              target="_blank"
+              className="flex flex-col gap-4 rounded border p-4 transition-transform md:hover:scale-105"
+            >
+              <p className="text-center text-lg font-bold">{project.title}</p>
+              <div className="relative aspect-video w-full overflow-hidden rounded bg-neutral-800">
+                {project.image && (
+                  <Image
+                    src={project.image}
+                    alt={`project ${project.title} preview image`}
+                    fill
+                  />
+                )}
+              </div>
+              <p className="text-neutral-400">{project.description}</p>
+              <div className="flex w-full flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <p
+                    key={`project-${project.title}-tag-${tag}`}
+                    className="flex-1 rounded border p-1 text-center text-xs"
+                  >
+                    {tag}
+                  </p>
+                ))}
+              </div>
+            </Link>
+          ))}
         </div>
+
+        <Link
+          className="text-neutral-500 underline hover:text-neutral-400"
+          target="_blank"
+          href="https://github.com/imLymei?tab=repositories"
+        >
+          See more {"->"}
+        </Link>
       </section>
     </div>
   );
