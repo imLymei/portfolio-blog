@@ -1,3 +1,4 @@
+import BadgeLink from "@/components/BadgeLink";
 import RollWrapper from "@/components/RollWrapper";
 import { ICON_SIZE, SKILLS, PROJECTS } from "@/config";
 import Image from "next/image";
@@ -20,10 +21,18 @@ export default function Home() {
           expand my knowledge and continually challenge myself.
         </p>
         <p>
-          Currently, I lead the software development team at Jean Piaget, where
-          I develop tools and apps to support students in their studies and
-          assist staff in their work. I primarily work with TypeScript and
-          React, managing a dedicated team to deliver impactful solutions.
+          Currently, I lead the software development team at{" "}
+          <BadgeLink href="https://www.jeanpiaget.g12.br/">
+            Jean Piaget
+          </BadgeLink>
+          , where I develop tools and apps to support students in their studies
+          and assist staff in their work. I primarily work with{" "}
+          <BadgeLink href="https://www.typescriptlang.org/">
+            TypeScript
+          </BadgeLink>{" "}
+          and
+          <BadgeLink href="https://react.dev/">React</BadgeLink>, managing a
+          dedicated team to deliver impactful solutions.
         </p>
       </section>
 

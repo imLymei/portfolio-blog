@@ -14,6 +14,7 @@ export const NAVBAR_ITENS: NavbarItem[] = [
 ];
 
 export const ICON_SIZE = {
+  EXTRA_SMALL: 20,
   SMALL: 30,
   MEDIUM: 40,
   LARGE: 50,
