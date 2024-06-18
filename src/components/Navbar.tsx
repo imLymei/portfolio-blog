@@ -16,6 +16,7 @@ export default function Navbar() {
       <Link
         className="absolute left-1/2 -translate-x-1/2"
         href="https://github.com/imLymei"
+        target="_blank"
       >
         Lymei
       </Link>
