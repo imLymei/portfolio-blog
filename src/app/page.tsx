@@ -6,18 +6,24 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="flex flex-col gap-24">
-      <section>
+      <section className="space-y-4 text-lg">
         <h1 className="py-32 text-center text-4xl font-bold sm:text-5xl md:text-6xl">
           {"<👋 HELLO WORLD />"}
         </h1>
 
-        <p className="text-lg">
-          My name is Felipe Cardoso and I am a full stack developer focused on
-          web development who likes to build new and old things, just like this
-          portfolio with a blog! So{" "}
-          <span className="font-bold">✨ O L D S C H O O L ✨</span>! Jokes
-          aside, I like to build everything that exists to expand my knowledge
-          and try to create new things to challenge myself.
+        <p>
+          My name is Felipe Cardoso, and I am a full stack developer
+          specializing in web development. I enjoy creating both new and classic
+          projects, like this portfolio with a blog—so{" "}
+          <span className="font-bold">✨ O L D S C H O O L ✨</span>! Humor
+          aside, I am passionate about building a wide range of applications to
+          expand my knowledge and continually challenge myself.
+        </p>
+        <p>
+          Currently, I lead the software development team at Jean Piaget, where
+          I develop tools and apps to support students in their studies and
+          assist staff in their work. I primarily work with TypeScript and
+          React, managing a dedicated team to deliver impactful solutions.
         </p>
       </section>
 
