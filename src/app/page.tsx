@@ -1,3 +1,9 @@
+import RollWrapper from "@/components/RollWrapper";
+import { ICON_SIZE } from "@/config";
+import { BiLogoTypescript } from "react-icons/bi";
+import { FaDatabase, FaGitAlt, FaNodeJs, FaPython } from "react-icons/fa6";
+import { RiNextjsFill } from "react-icons/ri";
+
 export default function Home() {
   return (
     <div className="flex flex-col gap-6">
@@ -10,27 +16,29 @@ export default function Home() {
           My name is Felipe Cardoso and I am a full stack developer focused on
           web development who likes to build new and old things, just like this
           portfolio with a blog! So{" "}
-          <span className="font-semibold">✨O L D S C H O O L✨</span>!
-        </p>
-
-        <p className="text-lg">
-          Jokes aside, I like to build everything that exists to expand my
+          <span className="to bg-gradient-to-br from-yellow-200 to-yellow-500 bg-clip-text font-semibold text-transparent">
+            ✨ O L D S C H O O L ✨
+          </span>
+          ! Jokes aside, I like to build everything that exists to expand my
           knowledge and try to create new things to challenge myself.
         </p>
       </section>
 
       <section>
         <h2 className="text-4xl font-bold">Skills</h2>
-        <ul className="mt-4 list-inside list-disc space-y-2">
-          <li>JavaScript / TypeScript</li>
-          <li>React / Next.js</li>
-          <li>Node.js / Express</li>
-          <li>HTML / CSS / Tailwind CSS</li>
-          <li>Database Management (MySQL, MongoDB)</li>
-          <li>Version Control (Git, GitHub)</li>
-          <li>API Development and Integration</li>
-          <li>Unit and Integration Testing</li>
-        </ul>
+        <div className="py-32">
+          <RollWrapper>
+            <BiLogoTypescript title="Typescript" size={ICON_SIZE.EXTRA_LARGE} />
+            <RiNextjsFill title="Next.js" size={ICON_SIZE.EXTRA_LARGE} />
+            <FaNodeJs title="Node.js" size={ICON_SIZE.EXTRA_LARGE} />
+            <FaDatabase
+              title="Database Management"
+              size={ICON_SIZE.EXTRA_LARGE}
+            />
+            <FaGitAlt title="Git" size={ICON_SIZE.EXTRA_LARGE} />
+            <FaPython size={ICON_SIZE.EXTRA_LARGE} />
+          </RollWrapper>
+        </div>
       </section>
 
       <section>
