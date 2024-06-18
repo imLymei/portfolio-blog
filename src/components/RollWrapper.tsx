@@ -16,7 +16,7 @@ export default function RollWrapper({
       onMouseLeave={() => setIsPaused(false)}
     >
       <div
-        className="animate-roll grid w-full grid-flow-col justify-items-center will-change-transform"
+        className="grid w-full animate-roll grid-flow-col justify-items-center will-change-transform"
         style={{ animationPlayState: isPaused ? "paused" : "running" }}
       >
         {children}
