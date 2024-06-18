@@ -1,3 +1,4 @@
+import NotFound from "@/app/not-found";
 import { getDaysSinceText, getPost } from "@/lib/utils";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
@@ -9,7 +10,7 @@ export default async function PostPage({
 }) {
   const post = await getPost(params.slug);
 
-  if (!post) return <div>Post not Found</div>;
+  if (!post) return <NotFound />;
 
   const today = new Date();
   const modificationDate = post.metadata.modificationDate;
