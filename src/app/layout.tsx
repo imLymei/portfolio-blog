@@ -21,11 +21,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen dark:bg-neutral-950 dark:text-neutral-50",
+          "min-h-screen px-6 dark:bg-neutral-950 dark:text-neutral-50",
           inter.className,
         )}
       >
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-4xl">
           <Navbar />
           <main className="py-24">{children}</main>
         </div>
