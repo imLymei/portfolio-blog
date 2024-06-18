@@ -14,11 +14,16 @@ export default function Navbar() {
         </ul>
       </nav>
       <Link
-        className="absolute left-1/2 -translate-x-1/2"
+        className="group absolute left-1/2 flex h-8 w-52 -translate-x-1/2 items-center justify-center"
         href="https://github.com/imLymei"
         target="_blank"
       >
-        Lymei
+        <p className="absolute block text-nowrap transition group-hover:-translate-y-full group-hover:opacity-0">
+          Felipe Cardoso
+        </p>
+        <p className="absolute translate-y-full text-nowrap opacity-0 transition group-hover:translate-y-0 group-hover:opacity-100">
+          Lymei
+        </p>
       </Link>
       <div></div>
     </header>

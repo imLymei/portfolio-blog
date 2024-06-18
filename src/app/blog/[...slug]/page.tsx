@@ -1,5 +1,6 @@
 import { getDaysSinceText, getPost } from "@/lib/utils";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import Link from "next/link";
 
 export default async function PostPage({
   params,
@@ -18,8 +19,14 @@ export default async function PostPage({
   );
 
   return (
-    <article>
-      <div className="py-12 text-center">
+    <article className="space-y-12" id="top">
+      <Link
+        href={"/blog"}
+        className="text-sm text-neutral-400 hover:text-neutral-300"
+      >
+        {"<-"} See others posts
+      </Link>
+      <div className="text-center">
         <h1>{post.metadata.title}</h1>
         {post.metadata.description && <p>{post.metadata.description}</p>}
         <div className="flex gap-4 text-sm text-neutral-400">
@@ -33,6 +40,12 @@ export default async function PostPage({
         </div>
       </div>
       <MDXRemote source={post.content} />
+      <Link
+        href="#top"
+        className="absolute left-1/2 -translate-x-1/2 text-sm text-neutral-400 hover:text-neutral-300"
+      >
+        Go to top
+      </Link>
     </article>
   );
 }

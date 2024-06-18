@@ -1,12 +1,19 @@
 import RollWrapper from "@/components/RollWrapper";
 import { ICON_SIZE } from "@/config";
 import { BiLogoTypescript } from "react-icons/bi";
-import { FaDatabase, FaGitAlt, FaNodeJs, FaPython } from "react-icons/fa6";
-import { RiNextjsFill } from "react-icons/ri";
+import {
+  FaAws,
+  FaDatabase,
+  FaGitAlt,
+  FaNodeJs,
+  FaPython,
+} from "react-icons/fa6";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
+import { TbBrandCSharp } from "react-icons/tb";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-24">
       <section>
         <h1 className="py-24 text-center text-4xl font-bold sm:text-5xl md:text-6xl">
           {"<👋 HELLO WORLD />"}
@@ -16,27 +23,31 @@ export default function Home() {
           My name is Felipe Cardoso and I am a full stack developer focused on
           web development who likes to build new and old things, just like this
           portfolio with a blog! So{" "}
-          <span className="to bg-gradient-to-br from-yellow-200 to-yellow-500 bg-clip-text font-semibold text-transparent">
-            ✨ O L D S C H O O L ✨
-          </span>
-          ! Jokes aside, I like to build everything that exists to expand my
-          knowledge and try to create new things to challenge myself.
+          <span className="font-bold">✨ O L D S C H O O L ✨</span>! Jokes
+          aside, I like to build everything that exists to expand my knowledge
+          and try to create new things to challenge myself.
         </p>
       </section>
 
       <section>
         <h2 className="text-4xl font-bold">Skills</h2>
-        <div className="py-32">
+        <div className="pt-32 lg:pb-24 xl:pb-32">
           <RollWrapper>
             <BiLogoTypescript title="Typescript" size={ICON_SIZE.EXTRA_LARGE} />
-            <RiNextjsFill title="Next.js" size={ICON_SIZE.EXTRA_LARGE} />
             <FaNodeJs title="Node.js" size={ICON_SIZE.EXTRA_LARGE} />
+            <RiNextjsFill title="Next.js" size={ICON_SIZE.EXTRA_LARGE} />
+            <RiTailwindCssFill
+              title="Tailwind CSS"
+              size={ICON_SIZE.EXTRA_LARGE}
+            />
             <FaDatabase
               title="Database Management"
               size={ICON_SIZE.EXTRA_LARGE}
             />
             <FaGitAlt title="Git" size={ICON_SIZE.EXTRA_LARGE} />
-            <FaPython size={ICON_SIZE.EXTRA_LARGE} />
+            <FaPython title="Python" size={ICON_SIZE.EXTRA_LARGE} />
+            <TbBrandCSharp title="C#" size={ICON_SIZE.EXTRA_LARGE} />
+            <FaAws title="AWS" size={ICON_SIZE.EXTRA_LARGE} />
           </RollWrapper>
         </div>
       </section>
@@ -66,21 +77,6 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </section>
-
-      <section>
-        <h2 className="text-4xl font-bold">Contact</h2>
-        <p className="mt-4 text-lg">
-          Feel free to reach out to me for any inquiries or opportunities. You
-          can contact me via email at{" "}
-          <a
-            href="mailto:felipe@example.com"
-            className="text-blue-600 underline"
-          >
-            felipe@example.com
-          </a>{" "}
-          or connect with me on LinkedIn.
-        </p>
       </section>
     </div>
   );
