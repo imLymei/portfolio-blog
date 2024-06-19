@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <header className="flex items-center justify-between gap-12 py-6">
       <nav>
-        <ul className="flex gap-6">
+        <ul className="flex gap-2 sm:gap-6">
           {NAVBAR_ITENS.map((item) => (
             <li key={`nav-item-${item.title}`}>
               <Link href={item.href}>{item.title}</Link>
@@ -15,7 +15,7 @@ export default function Navbar() {
         </ul>
       </nav>
       <Link
-        className="group absolute left-1/2 flex h-8 w-52 -translate-x-1/2 items-center justify-center"
+        className="group absolute left-1/2 flex h-8 w-32 -translate-x-1/2 items-center justify-center"
         href="https://github.com/imLymei"
         target="_blank"
       >
