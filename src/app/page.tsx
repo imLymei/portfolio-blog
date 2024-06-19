@@ -30,8 +30,7 @@ export default function Home() {
           <BadgeLink href="https://www.typescriptlang.org/">
             TypeScript
           </BadgeLink>{" "}
-          and
-          <BadgeLink href="https://react.dev/">React</BadgeLink>, managing a
+          and <BadgeLink href="https://react.dev/">React</BadgeLink>, managing a
           dedicated team to deliver impactful solutions.
         </p>
       </section>
