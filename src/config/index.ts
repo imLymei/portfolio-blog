@@ -7,6 +7,7 @@ import {
   FaPython,
   FaAws,
 } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { TbBrandCSharp } from "react-icons/tb";
 
@@ -57,8 +58,8 @@ export const PROJECTS = [
   {
     title: "Personal Portfolio Website",
     description:
-      "This very site you are looking at! It's my blog portfolio where i showcase my abilities and progress as a developer.",
-    tags: ["Typescriptz", "Next.js", "Tailwind CSS", "MDX"],
+      "This very site you are looking at! It's my portfolio blog where i showcase my abilities and progress as a developer.",
+    tags: ["Typescript", "Next.js", "Tailwind CSS", "MDX"],
     repository: "https://github.com/imLymei/portfolio-blog",
     image: "/images/projects/portfolio.png",
   },
@@ -78,4 +79,9 @@ export const PROJECTS = [
     repository: "https://github.com/yourusername/weather-app",
     image: "/images/projects/korjata.png",
   },
+];
+
+export const SOCIAL_LINKS = [
+  { icon: FaLinkedin, href: "https://www.linkedin.com/in/imlymei" },
+  { icon: FaGithub, href: "https://github.com/imLymei" },
 ];

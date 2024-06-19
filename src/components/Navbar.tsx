@@ -1,9 +1,10 @@
-import { NAVBAR_ITENS } from "@/config";
+import { ICON_SIZE, NAVBAR_ITENS, SOCIAL_LINKS } from "@/config";
 import Link from "next/link";
+import { PiArrowArcLeftThin } from "react-icons/pi";
 
 export default function Navbar() {
   return (
-    <header className="flex justify-between gap-12 py-6">
+    <header className="flex items-center justify-between gap-12 py-6">
       <nav>
         <ul className="flex gap-6">
           {NAVBAR_ITENS.map((item) => (
@@ -25,7 +26,20 @@ export default function Navbar() {
           Lymei
         </p>
       </Link>
-      <div></div>
+      <div className="relative flex gap-2">
+        {SOCIAL_LINKS.map((social, index) => (
+          <Link key={`social-link-${index}`} href={social.href}>
+            <social.icon />
+          </Link>
+        ))}
+        <div className="absolute -bottom-2 right-0 translate-y-full rotate-6 text-nowrap text-xs text-neutral-500">
+          <p>You can also find me here!</p>
+          <PiArrowArcLeftThin
+            size={ICON_SIZE.SMALL}
+            className="absolute right-0 top-0 hidden -translate-y-full translate-x-full rotate-45 md:block"
+          />
+        </div>
+      </div>
     </header>
   );
 }
