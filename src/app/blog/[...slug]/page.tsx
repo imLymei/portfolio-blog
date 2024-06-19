@@ -1,4 +1,5 @@
 import NotFound from "@/app/not-found";
+import Sandbox from "@/components/Sandbox";
 import { getDaysSinceText, getPost } from "@/lib/utils";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
@@ -40,7 +41,8 @@ export default async function PostPage({
           </p>
         </div>
       </div>
-      <MDXRemote source={post.content} />
+
+      <MDXRemote components={{ Sandbox }} source={post.content} />
       <Link
         href="#top"
         className="absolute left-1/2 -translate-x-1/2 text-sm text-neutral-400 no-underline hover:text-neutral-300"

@@ -9,6 +9,8 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
+const postsDirectory = path.join(process.cwd(), "src", "posts");
+
 export async function getPosts(): Promise<
   {
     filename: string;
@@ -21,7 +23,6 @@ export async function getPosts(): Promise<
     timeToRead: number;
   }[]
 > {
-  const postsDirectory = path.join(process.cwd(), "posts");
   const filenames = fs
     .readdirSync(postsDirectory)
     .filter((filename) => filename.slice(-3) === "mdx");
@@ -63,7 +64,7 @@ export async function getPost(postName: string): Promise<
   | undefined
 > {
   try {
-    const filePath = path.join(process.cwd(), "posts", `${postName}.mdx`);
+    const filePath = path.join(postsDirectory, `${postName}.mdx`);
     const fileContents = fs.readFileSync(filePath, "utf8");
     const { data: metadata, content } = matter(fileContents);
 

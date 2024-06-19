@@ -1,3 +1,15 @@
+import { IconType } from "react-icons";
+import { BiLogoTypescript } from "react-icons/bi";
+import {
+  FaNodeJs,
+  FaDatabase,
+  FaGitAlt,
+  FaPython,
+  FaAws,
+} from "react-icons/fa";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
+import { TbBrandCSharp } from "react-icons/tb";
+
 export const APP_CONFIG = {
   title: "Felipe Cardoso",
   description: "WIP",
@@ -20,18 +32,6 @@ export const ICON_SIZE = {
   LARGE: 50,
   EXTRA_LARGE: 60,
 };
-
-import { IconType } from "react-icons";
-import { BiLogoTypescript } from "react-icons/bi";
-import {
-  FaNodeJs,
-  FaDatabase,
-  FaGitAlt,
-  FaPython,
-  FaAws,
-} from "react-icons/fa";
-import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { TbBrandCSharp } from "react-icons/tb";
 
 export const SKILLS: { icon: IconType; title: string }[] = [
   { icon: BiLogoTypescript, title: "Typescript" },
