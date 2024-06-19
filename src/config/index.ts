@@ -57,24 +57,25 @@ export const PROJECTS = [
   {
     title: "Personal Portfolio Website",
     description:
-      "A personal portfolio website to showcase my projects and skills.",
-    tags: ["HTML", "CSS", "JavaScript", "React"],
-    repository: "https://github.com/yourusername/portfolio-website",
-    image: "/images/placeholder.png",
+      "This very site you are looking at! It's my blog portfolio where i showcase my abilities and progress as a developer.",
+    tags: ["Typescriptz", "Next.js", "Tailwind CSS", "MDX"],
+    repository: "https://github.com/imLymei/portfolio-blog",
+    image: "/images/projects/portfolio.png",
   },
   {
-    title: "Todo List App",
-    description: "A simple todo list application to track daily tasks.",
-    tags: ["React", "TypeScript", "Node.js", "MongoDB"],
-    repository: "https://github.com/yourusername/todo-list-app",
-    image: "/images/placeholder.png",
-  },
-  {
-    title: "Weather App",
+    title: "Front End Challenge",
     description:
-      "A weather application that displays weather information using an external API.",
-    tags: ["JavaScript", "API", "CSS", "HTML"],
+      "A simple front end challenge with three steps: A roman number converter, Conway's game of life and a Restaurant bill splitter.",
+    tags: ["TypeScript", "Next.js", "Tailwind CSS"],
+    repository: "https://github.com/imLymei/desafios-rdo",
+    image: "/images/projects/challenge.png",
+  },
+  {
+    title: "Job hunting platform for developers",
+    description:
+      "A simple job hunting platform made for enterprises to find developers to help their projects.",
+    tags: ["TypeScript", "Next.js", "Tailwind CSS", "API", "MongoDB"],
     repository: "https://github.com/yourusername/weather-app",
-    image: "/images/placeholder.png",
+    image: "/images/projects/korjata.png",
   },
 ];

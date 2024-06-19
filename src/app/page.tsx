@@ -77,24 +77,27 @@ export default function Home() {
               key={`project-${project.title}`}
               href={project.repository}
               target="_blank"
-              className="flex flex-col gap-4 rounded border p-4 transition-transform md:hover:scale-105"
+              className="flex flex-col justify-between gap-4 rounded border p-4 transition-transform md:hover:scale-105"
             >
               <p className="text-center text-lg font-bold">{project.title}</p>
-              <div className="relative aspect-video w-full overflow-hidden rounded bg-neutral-800">
-                {project.image && (
-                  <Image
-                    src={project.image}
-                    alt={`project ${project.title} preview image`}
-                    fill
-                  />
-                )}
+              <div>
+                <div className="relative aspect-video w-full overflow-hidden rounded border border-neutral-600 bg-neutral-800">
+                  {project.image && (
+                    <Image
+                      src={project.image}
+                      alt={`project ${project.title} preview image`}
+                      className="object-cover"
+                      fill
+                    />
+                  )}
+                </div>
+                <p className="text-neutral-400">{project.description}</p>
               </div>
-              <p className="text-neutral-400">{project.description}</p>
               <div className="flex w-full flex-wrap gap-2">
                 {project.tags.map((tag) => (
                   <p
                     key={`project-${project.title}-tag-${tag}`}
-                    className="flex-1 rounded border p-1 text-center text-xs"
+                    className="flex-1 text-nowrap rounded border p-1 text-center text-xs"
                   >
                     {tag}
                   </p>
