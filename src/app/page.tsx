@@ -3,6 +3,8 @@ import RollWrapper from "@/components/RollWrapper";
 import { ICON_SIZE, SKILLS, PROJECTS } from "@/config";
 import Image from "next/image";
 import Link from "next/link";
+import { FaReact } from "react-icons/fa6";
+import { SiTypescript } from "react-icons/si";
 
 export default function Home() {
   return (
@@ -23,15 +25,32 @@ export default function Home() {
         <p>
           Currently, I lead the software development team at{" "}
           <BadgeLink href="https://www.jeanpiaget.g12.br/">
+            <span className="relative aspect-square h-4">
+              <Image
+                src="/icons/jean-piaget.png"
+                alt="Jean Piaget Icon"
+                quality={100}
+                fill
+                className="object-contain"
+              />
+            </span>
             Jean Piaget
           </BadgeLink>
           , where I develop tools and apps to support students in their studies
           and assist staff in their work. I primarily work with{" "}
           <BadgeLink href="https://www.typescriptlang.org/">
+            <SiTypescript
+              className="text-blue-500"
+              size={ICON_SIZE.EXTRA_SMALL}
+            />
             TypeScript
           </BadgeLink>{" "}
-          and <BadgeLink href="https://react.dev/">React</BadgeLink>, managing a
-          dedicated team to deliver impactful solutions.
+          and{" "}
+          <BadgeLink href="https://react.dev/">
+            <FaReact className="text-blue-500" size={ICON_SIZE.EXTRA_SMALL} />{" "}
+            React
+          </BadgeLink>
+          , managing a dedicated team to deliver impactful solutions.
         </p>
       </section>
 

@@ -9,7 +9,7 @@ export default function BadgeLink({ children, ...props }: BadgeLinkProps) {
     <Link
       {...props}
       target="_blank"
-      className="rounded border border-neutral-700 bg-neutral-800 p-1"
+      className="inline-flex items-center gap-2 rounded border border-neutral-700 bg-neutral-800 p-1 text-sm"
     >
       {children}
     </Link>
