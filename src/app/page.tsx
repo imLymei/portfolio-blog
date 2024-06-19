@@ -56,7 +56,7 @@ export default function Home() {
 
       <section>
         <h2 className="text-center text-4xl font-bold">Skills</h2>
-        <div className="py-32">
+        <div className="pb-32">
           <RollWrapper>
             {SKILLS.map((skill) => (
               <skill.icon

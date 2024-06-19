@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen overflow-x-hidden px-6 antialiased dark:bg-neutral-950 dark:text-neutral-50",
+          "min-h-screen w-screen overflow-x-hidden px-6 antialiased dark:bg-neutral-950 dark:text-neutral-50",
           inter.className,
         )}
       >
