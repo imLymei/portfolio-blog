@@ -62,7 +62,7 @@ export default function Home() {
               <skill.icon
                 key={`skill-${skill.title}`}
                 title={skill.title}
-                size={ICON_SIZE.LARGE}
+                size={ICON_SIZE.MEDIUM}
               />
             ))}
           </RollWrapper>
