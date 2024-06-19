@@ -11,7 +11,7 @@ export default function RollWrapper({
 
   return (
     <div
-      className="absolute -right-6 flex w-[200vw] -translate-y-full rotate-6 items-center overflow-hidden border-y-4 border-double py-4"
+      className="absolute -right-6 flex w-[200vw] min-w-[124rem] -translate-y-full rotate-6 items-center overflow-hidden border-y-4 border-double py-4"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >

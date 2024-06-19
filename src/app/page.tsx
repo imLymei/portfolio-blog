@@ -56,13 +56,13 @@ export default function Home() {
 
       <section>
         <h2 className="text-center text-4xl font-bold">Skills</h2>
-        <div className="pt-32 lg:pb-24 xl:pb-32">
+        <div className="py-32">
           <RollWrapper>
             {SKILLS.map((skill) => (
               <skill.icon
                 key={`skill-${skill.title}`}
                 title={skill.title}
-                size={ICON_SIZE.MEDIUM}
+                size={ICON_SIZE.EXTRA_LARGE}
               />
             ))}
           </RollWrapper>
