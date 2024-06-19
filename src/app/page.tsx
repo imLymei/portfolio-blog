@@ -18,9 +18,9 @@ export default function Home() {
           My name is Felipe Cardoso, and I am a full stack developer
           specializing in web development. I enjoy creating both new and classic
           projects, like this portfolio with a blog—so{" "}
-          <span className="font-bold">✨ O L D S C H O O L ✨</span>! Humor
-          aside, I am passionate about building a wide range of applications to
-          expand my knowledge and continually challenge myself.
+          <span className="text-nowrap font-bold">✨ O L D S C H O O L ✨</span>
+          ! Humor aside, I am passionate about building a wide range of
+          applications to expand my knowledge and continually challenge myself.
         </p>
         <p>
           Currently, I lead the software development team at{" "}
@@ -62,7 +62,7 @@ export default function Home() {
               <skill.icon
                 key={`skill-${skill.title}`}
                 title={skill.title}
-                size={ICON_SIZE.EXTRA_LARGE}
+                size={ICON_SIZE.LARGE}
               />
             ))}
           </RollWrapper>
