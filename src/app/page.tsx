@@ -88,6 +88,8 @@ export default function Home() {
                       src={project.image}
                       alt={`project ${project.title} preview image`}
                       className="object-cover"
+                      quality={100}
+                      priority
                       fill
                     />
                   )}
