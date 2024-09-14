@@ -97,6 +97,8 @@ export function getDaysSinceText(days: number) {
     case 1:
       return "yesterday";
     default:
-      return `${days} days ago`;
+      if (days < 60) return `${days} days ago`;
+      if (days < 365) return `${Math.floor(days / 30)} months ago`;
+      return `${Math.floor(days / 365)} years ago`;
   }
 }
