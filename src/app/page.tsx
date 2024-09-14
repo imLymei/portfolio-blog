@@ -15,7 +15,7 @@ export default function Home() {
           <span className="text-nowrap">{"WORLD />"}</span>
         </h1>
 
-        <p>
+        <p className="text-justify">
           My name is Felipe Cardoso, and I am a full stack developer
           specializing in web development. I enjoy creating both new and classic
           projects, like this portfolio with a blog—so{" "}
@@ -23,7 +23,7 @@ export default function Home() {
           ! Humor aside, I am passionate about building a wide range of
           applications to expand my knowledge and continually challenge myself.
         </p>
-        <p>
+        <p className="text-justify">
           Currently, I lead the software development team at{" "}
           <BadgeLink href="https://www.jeanpiaget.g12.br/">
             <span className="relative aspect-square h-4">
