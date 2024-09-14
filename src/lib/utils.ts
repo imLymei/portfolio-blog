@@ -87,7 +87,7 @@ export async function getPost(postName: string): Promise<
 export function calculateTimeToRead(content: string): number {
   const totalWords = content.trim().split(" ").length;
 
-  return Math.round(totalWords / 50);
+  return Math.round(totalWords / 150);
 }
 
 export function getDaysSinceText(days: number) {
