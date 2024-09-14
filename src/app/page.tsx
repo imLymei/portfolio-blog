@@ -11,7 +11,8 @@ export default function Home() {
     <div className="flex flex-col gap-24">
       <section className="space-y-4 text-lg">
         <h1 className="py-32 text-center text-4xl font-bold sm:text-5xl md:text-6xl">
-          {"<👋 HELLO WORLD />"}
+          <span className="text-nowrap">{"<👋 HELLO"}</span>{" "}
+          <span className="text-nowrap">{"WORLD />"}</span>
         </h1>
 
         <p>
