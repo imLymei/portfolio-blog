@@ -13,7 +13,8 @@ import { TbBrandCSharp } from "react-icons/tb";
 
 export const APP_CONFIG = {
   title: "Felipe Cardoso",
-  description: "WIP",
+  description:
+    "Hi! My name is Felipe Cardoso, and I am a full stack developer specializing in web development. I enjoy creating both new and classic projects, like this portfolio with a blog. Let's build amazing things together!",
 };
 
 export type NavbarItem = {
