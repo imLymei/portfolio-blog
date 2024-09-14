@@ -38,7 +38,7 @@ export async function getPosts(): Promise<
       filename: filename.split(".")[0],
       metadata: {
         ...metadata,
-        creationDate: stats.birthtime,
+        creationDate: metadata.creationDate ?? stats.birthtime,
         modificationDate: stats.mtime,
       },
       timeToRead: calculateTimeToRead(content),
