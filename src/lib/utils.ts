@@ -39,7 +39,7 @@ export async function getPosts(): Promise<
       metadata: {
         ...metadata,
         creationDate: metadata.creationDate ?? stats.birthtime,
-        modificationDate: stats.mtime,
+        modificationDate: metadata.modificationDate ?? stats.mtime,
       },
       timeToRead: calculateTimeToRead(content),
     };
@@ -73,8 +73,8 @@ export async function getPost(postName: string): Promise<
     return {
       metadata: {
         ...metadata,
-        creationDate: stats.birthtime,
-        modificationDate: stats.mtime,
+        creationDate: metadata.creationDate ?? stats.birthtime,
+        modificationDate: metadata.modificationDate ?? stats.mtime,
       },
       content,
       timeToRead: calculateTimeToRead(content),
@@ -87,7 +87,7 @@ export async function getPost(postName: string): Promise<
 export function calculateTimeToRead(content: string): number {
   const totalWords = content.trim().split(" ").length;
 
-  return Math.round(totalWords / 250);
+  return Math.round(totalWords / 50);
 }
 
 export function getDaysSinceText(days: number) {
